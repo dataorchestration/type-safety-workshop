@@ -1,0 +1,46 @@
+[package]
+name = "type-safety-workshop"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "exercise_01_option"
+path = "src/exercises/ex01_option.rs"
+[[bin]]
+name = "exercise_02_result"
+path = "src/exercises/ex02_result.rs"
+[[bin]]
+name = "exercise_03_newtypes"
+path = "src/exercises/ex03_newtypes.rs"
+[[bin]]
+name = "exercise_04_transforms"
+path = "src/exercises/ex04_transforms.rs"
+[[bin]]
+name = "exercise_05_typestate"
+path = "src/exercises/ex05_typestate.rs"
+
+[[bin]]
+name = "solution_01_option"
+path = "src/solutions/sol01_option.rs"
+[[bin]]
+name = "solution_02_result"
+path = "src/solutions/sol02_result.rs"
+[[bin]]
+name = "solution_03_newtypes"
+path = "src/solutions/sol03_newtypes.rs"
+[[bin]]
+name = "solution_04_transforms"
+path = "src/solutions/sol04_transforms.rs"
+[[bin]]
+name = "solution_05_typestate"
+path = "src/solutions/sol05_typestate.rs"
+
+[[bin]]
+name = "bonus_phantom_types"
+path = "src/bonus/phantom_types.rs"
+
+[[bin]]
+name = "full_pipeline"
+path = "src/full_pipeline.rs"
