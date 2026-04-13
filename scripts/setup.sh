@@ -112,9 +112,9 @@ check_git() {
                 ;;
             linux|wsl)
                 case "${DISTRO:-}" in
-                    ubuntu|debian|pop) sudo apt-get update && sudo apt-get install -y git ;;
-                    fedora|rhel|centos) sudo dnf install -y git ;;
-                    arch|manjaro) sudo pacman -S --noconfirm git ;;
+                    ubuntu|debian|pop)  apt-get update &&  apt-get install -y git ;;
+                    fedora|rhel|centos)  dnf install -y git ;;
+                    arch|manjaro)  pacman -S --noconfirm git ;;
                     *) fail "Please install git manually"; ERRORS=$((ERRORS + 1)); return ;;
                 esac
                 ;;
@@ -166,9 +166,9 @@ check_os_deps() {
             else
                 warn "Installing build essentials..."
                 case "${DISTRO:-}" in
-                    ubuntu|debian|pop) sudo apt-get update && sudo apt-get install -y build-essential pkg-config libssl-dev ;;
-                    fedora|rhel|centos) sudo dnf groupinstall -y "Development Tools" && sudo dnf install -y openssl-devel ;;
-                    arch|manjaro) sudo pacman -S --noconfirm base-devel openssl ;;
+                    ubuntu|debian|pop)  apt-get update &&  apt-get install -y build-essential pkg-config libssl-dev ;;
+                    fedora|rhel|centos)  dnf groupinstall -y "Development Tools" &&  dnf install -y openssl-devel ;;
+                    arch|manjaro)  pacman -S --noconfirm base-devel openssl ;;
                     *) warn "Please install build tools (gcc, make, pkg-config, openssl-dev) manually" ;;
                 esac
             fi
